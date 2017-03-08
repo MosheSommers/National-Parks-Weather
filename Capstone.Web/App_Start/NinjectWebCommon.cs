@@ -5,6 +5,8 @@ namespace Capstone.Web.App_Start
 {
     using System;
     using System.Web;
+    using DAL;
+    using System.Configuration;
 
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 
@@ -61,6 +63,7 @@ namespace Capstone.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IParkDal>().To<ParkSqlDal>().WithConstructorArgument("connectionString", ConfigurationManager.ConnectionStrings["npgeekdb"].ConnectionString);
         }        
     }
 }
