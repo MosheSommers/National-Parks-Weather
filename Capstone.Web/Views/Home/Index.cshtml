@@ -12,7 +12,7 @@
         @for (int i = 0; i < 2; i++)
         {
             <div class="park">
-                <a href="#">
+                <a href="@Url.Action("Detail", "Home", new { code = Model[i].Code})">
                     <div class="park-picture"><img src="~/Content/img/parks/@(Model[i].Code).jpg" /></div>
                     <div class="park-details">
                         <h3>@Model[i].Name</h3>

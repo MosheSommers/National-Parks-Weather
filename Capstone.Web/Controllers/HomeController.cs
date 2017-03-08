@@ -21,5 +21,11 @@ namespace Capstone.Web.Controllers
             List<Park> parks = parkDal.GetParks();
             return View("Index", parks);
         }
+
+        public ActionResult Detail(string code)
+        {
+            Park p = parkDal.GetParkInfo(code);
+            return View("Detail", p);
+        }
     }
 }
