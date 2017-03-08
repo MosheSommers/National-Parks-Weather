@@ -19,7 +19,12 @@ namespace Capstone.Web.DAL
         {
             this.connectionString = connectionString;
         }
-        public List<Park> GetParkInfo(string parkCode)
+        public Park GetParkInfo(string parkCode)
+        {
+            return new Park();
+        }
+
+        public List<Park> GetParks()
         {
             try
             {
@@ -52,12 +57,7 @@ namespace Capstone.Web.DAL
 
                 throw;
             }
-           
-        }
 
-        public List<Park> GetParks()
-        {
-            throw new NotImplementedException();
         }
     }
 }

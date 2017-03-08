@@ -127,6 +127,7 @@
     <Content Include="Content\img\weather\sunny.png" />
     <Content Include="Content\img\weather\thunderstorms.png" />
     <Content Include="Global.asax" />
+    <Content Include="Content\stylesheet.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

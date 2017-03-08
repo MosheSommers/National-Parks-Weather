@@ -5,11 +5,87 @@
 }
 
 @using Capstone.Web.Models;
-@model List<Park> 
+@model List<Park>
 
-@for (int i = 0; i < Model.Count; i++)
-{
-    <div id="park-@(i + 1)">
+<div id="section-content">
+    <div class="row">
+        @for (int i = 0; i < 2; i++)
+        {
+            <div class="park">
+                <a href="#">
+                    <div class="park-picture"><img src="~/Content/img/parks/@(Model[i].Code).jpg" /></div>
+                    <div class="park-details">
+                        <h3>@Model[i].Name</h3>
+                        <p class="state">@Model[i].State</p>
+                        <p class="description">@Model[i].Description</p>
+                    </div>
+                </a>
 
+            </div>
+        }
     </div>
-}
+    <div class="row">
+        @for (int i = 2; i < 4; i++)
+        {
+            <div class="park">
+                <a href="#">
+                    <div class="park-picture"><img src="~/Content/img/parks/@(Model[i].Code).jpg" /></div>
+                    <div class="park-details">
+                        <h3>@Model[i].Name</h3>
+                        <p class="state">@Model[i].State</p>
+                        <p class="description">@Model[i].Description</p>
+                    </div>
+                </a>
+
+            </div>
+        }
+    </div>
+    <div class="row">
+        @for (int i = 4; i < 6; i++)
+        {
+            <div class="park">
+                <a href="#">
+                    <div class="park-picture"><img src="~/Content/img/parks/@(Model[i].Code).jpg" /></div>
+                    <div class="park-details">
+                        <h3>@Model[i].Name</h3>
+                        <p class="state">@Model[i].State</p>
+                        <p class="description">@Model[i].Description</p>
+                    </div>
+                </a>
+
+            </div>
+        }
+    </div>
+    <div class="row">
+        @for (int i = 6; i < 8; i++)
+        {
+            <div class="park">
+                <a href="#">
+                    <div class="park-picture"><img src="~/Content/img/parks/@(Model[i].Code).jpg" /></div>
+                    <div class="park-details">
+                        <h3>@Model[i].Name</h3>
+                        <p class="state">@Model[i].State</p>
+                        <p class="description">@Model[i].Description</p>
+                    </div>
+                </a>
+
+            </div>
+        }
+    </div>
+    <div class="row">
+        @for (int i = 8; i < 10; i++)
+        {
+            <div class="park">
+                <a href="#">
+                    <div class="park-picture"><img src="~/Content/img/parks/@(Model[i].Code).jpg" /></div>
+                    <div class="park-details">
+                        <h3>@Model[i].Name</h3>
+                        <p class="state">@Model[i].State</p>
+                        <p class="description">@Model[i].Description</p>
+                    </div>
+                </a>
+
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿body {
+
+}
+.section-content{
+    
+}
+.park{
+    display: inline-block;
+    width: 40%;
+    border: solid 5px #c6c2c2;
+    margin: 10px 20px;
+}
+.row{
+    display: inline-block;
+    display:flex;
+    justify-content:center;
+}
+a{
+    text-decoration:none;
+}
+.park-details{
+    padding:1%;
+}
