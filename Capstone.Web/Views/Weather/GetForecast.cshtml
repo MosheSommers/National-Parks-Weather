@@ -4,7 +4,11 @@
     Layout = "~/Views/Shared/_layout.cshtml";
 }
 
-<div id="section-content">
-
-
+<div id="forecast-page">
+    <div id="section-content">
+        <div class="weather-image">
+            <img src="~/Content/img/weather/@(Model.ParkCode).png" />
+        </div>
+    </div>
 </div>
+
