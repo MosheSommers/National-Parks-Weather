@@ -46,3 +46,18 @@ a{
 .park-details{
     padding:1%;
 }
+#detail-page .park{
+    display:flex;
+    justify-content:center;
+
+}
+#detail-image image{
+    height:100%;
+    width: 50%; 
+}
+#weather-link a{
+    background-color:black;
+    color:white;
+    border-radius: 5px;
+    padding:4px;
+}

@@ -135,11 +135,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\IParkDal.cs" />
+    <Compile Include="DAL\IWeatherDal.cs" />
     <Compile Include="DAL\ParkSqlDal.cs" />
+    <Compile Include="DAL\WeatherSqlDal.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Park.cs" />
+    <Compile Include="Models\Weather.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

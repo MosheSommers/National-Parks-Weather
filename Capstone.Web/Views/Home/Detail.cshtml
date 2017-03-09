@@ -3,6 +3,48 @@
     ViewBag.Title = "Detail";
     Layout = "~/Views/Shared/_layout.cshtml";
 }
+@using Capstone.Web.Models;
+@model Park
 
-<h2>Detail</h2>
-
+<div id="detail-page">
+    <div id="section-content">
+        <div class="park">
+            <div id="detail-image">
+                <img src="~/Content/img/parks/@(Model.Code).jpg" />
+            </div>
+            <div id="detail-details">
+                <div id="park-name">
+                    <h2>@Model.Name</h2>
+                    <h4>@Model.State</h4>
+                    <h4>Founded In @Model.YearFounded</h4>
+                </div>
+                <div id="park-facts">
+                    <ul>
+                        <li>@String.Format("{0:n0}", Model.Acreage) Acres</li>
+                        <li>Highest Point @String.Format("{0:n0}", Model.Elevation)</li>
+                        <li>@Model.MilesOfTrail Miles of Hiking Trails</li>
+                        @if (Model.NumberOfCampsites > 0)
+                        {
+                            <li>@Model.NumberOfCampsites Campsites</li>
+                        }
+                        <li>@String.Format("{0:n0}", Model.AnnualVisitors) Visitors Per Year</li>
+                        <li>@Model.NumberOfSpecies Species</li>
+                        <li>@Model.Climate Weather</li>
+                    </ul>
+                </div>
+                <div id="weather-link">
+                    @Html.ActionLink("Check 5 Day Forcast", "GetWeather", "Weather", new { code= Model.Code })
+                </div>
+                <div id="quote">
+                    <blockquote>
+                        <q>@Model.Quote</q>
+                        <p> -@Model.QuoteSource</p>
+                    </blockquote>
+                </div>
+                <div id="description">
+                    <p>@Model.Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
