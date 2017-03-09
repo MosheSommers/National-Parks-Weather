@@ -28,7 +28,7 @@
         @for (int i = 2; i < 4; i++)
         {
             <div class="park">
-                <a href="#">
+                <a href="@Url.Action("Detail", "Home", new { code = Model[i].Code})">
                     <div class="park-picture"><img src="~/Content/img/parks/@(Model[i].Code).jpg" /></div>
                     <div class="park-details">
                         <h3>@Model[i].Name</h3>
@@ -44,7 +44,7 @@
         @for (int i = 4; i < 6; i++)
         {
             <div class="park">
-                <a href="#">
+                <a href="@Url.Action("Detail", "Home", new { code = Model[i].Code})">
                     <div class="park-picture"><img src="~/Content/img/parks/@(Model[i].Code).jpg" /></div>
                     <div class="park-details">
                         <h3>@Model[i].Name</h3>
