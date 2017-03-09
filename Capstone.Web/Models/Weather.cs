@@ -7,9 +7,9 @@ namespace Capstone.Web.Models
 {
     public class Weather
     {
-        public Weather()
+        public Weather(bool farenheit)
         {
-            Farenheit = true;
+            Farenheit = farenheit;
         }
 
         public string ParkCode { get; set; }
@@ -62,6 +62,15 @@ namespace Capstone.Web.Models
             }
 
             return Suggestion;
+        }
+
+        public int GetTemperature(int temp)
+        {
+            if (!Farenheit)
+            {
+                return (temp - 32) * (5 / 9);
+            }
+            return temp;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Capstone.Web.DAL
             this.connectionString = connectionString;
         }
 
-        public List<Weather> GetFiveDayForecast(string code)
+        public List<Weather> GetFiveDayForecast(string code, bool farenheit)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace Capstone.Web.DAL
 
                     while (reader.Read())
                     {
-                       Weather w = new Weather();
+                       Weather w = new Weather(farenheit);
 
                         w.ParkCode = Convert.ToString(reader["parkcode"]);
                         w.Day = Convert.ToInt32(reader["fiveDayForecastValue"]);

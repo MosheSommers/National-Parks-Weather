@@ -134,6 +134,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\WeatherController.cs" />
     <Compile Include="DAL\IParkDal.cs" />
     <Compile Include="DAL\IWeatherDal.cs" />
     <Compile Include="DAL\ParkSqlDal.cs" />
@@ -151,6 +152,7 @@
     <Content Include="Views\Shared\_layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Detail.cshtml" />
+    <Content Include="Views\Weather\GetForecast.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

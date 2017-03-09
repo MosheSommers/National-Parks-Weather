@@ -9,7 +9,7 @@ namespace Capstone.Web.DAL
 {
     public interface IWeatherDal
     {
-        List<Weather> GetFiveDayForecast(string code);
+        List<Weather> GetFiveDayForecast(string code, bool farenheit);
        
     }
 }
