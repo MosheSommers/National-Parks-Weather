@@ -137,8 +137,10 @@
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\WeatherController.cs" />
     <Compile Include="DAL\IParkDal.cs" />
+    <Compile Include="DAL\ISurveyDal.cs" />
     <Compile Include="DAL\IWeatherDal.cs" />
     <Compile Include="DAL\ParkSqlDal.cs" />
+    <Compile Include="DAL\SurveySqlDal.cs" />
     <Compile Include="DAL\WeatherSqlDal.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -155,6 +157,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Detail.cshtml" />
     <Content Include="Views\Weather\GetForecast.cshtml" />
+    <Content Include="Views\Survey\Survey.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -164,7 +167,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Survey\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
