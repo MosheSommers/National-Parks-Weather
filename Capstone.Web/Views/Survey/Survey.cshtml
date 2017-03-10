@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "Survey";
-    Layout = "~/Views/Shared/_layout.cshtml";
+    //Layout = "~/Views/Shared/_layout.cshtml";
 }
 @using Capstone.Web.Models;
 @model Survey
@@ -20,7 +20,7 @@
         </div>
 
         <div class="formInputGroup">
-            @Html.Label("State", "Choose A State");
+            @Html.Label("State", "Choose A State")
             @Html.DropDownListFor(m => m.State, Survey.States)
         </div>
 

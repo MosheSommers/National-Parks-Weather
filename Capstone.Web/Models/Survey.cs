@@ -25,7 +25,7 @@ namespace Capstone.Web.Models
             {
                 return new List<SelectListItem>()
                 {
-                    new SelectListItem { Value = "inactive", Text = "Inactice"  },
+                    new SelectListItem { Value = "inactive", Text = "Inactive"  },
                     new SelectListItem { Value = "sedentary", Text = "Sedentary" },
                     new SelectListItem { Value = "active", Text = "Active" },
                     new SelectListItem { Value = "extremely active", Text = "Extremely Active" }

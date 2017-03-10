@@ -37,9 +37,21 @@ namespace Capstone.Web.DAL
             }
         }
 
-        public List<Survey> GetSurveys()
-        {
-            throw new NotImplementedException();
-        }
+        //public List<Survey> GetSurveys()
+        //{
+        //    //try
+        //    //{
+        //    //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    //    {
+        //    //        connection.Open();
+        //    //        SqlCommand command = new SqlCommand("Select Count(parkCode) from survey_result inner join park on park.parkCode = survey_result.parkCode group by parkCode");
+        //    //    }
+
+        //    //}
+        //    catch (SqlException)
+        //    {
+        //        throw;
+        //    }
+        //}
     }
 }

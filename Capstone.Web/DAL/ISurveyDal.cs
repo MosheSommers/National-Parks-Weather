@@ -10,6 +10,6 @@ namespace Capstone.Web.DAL
     public interface ISurveyDal
     {
         void CreateSurvey(Survey survey);
-        List<Survey> GetSurveys();
+        //List<Survey> GetSurveys();
     }
 }
