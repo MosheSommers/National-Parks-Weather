@@ -14,12 +14,15 @@
 <body>
     <nav>
         <ul>
-            <li></li>
-            <li></li>
+            <li>@Html.ActionLink("Home","Index", "Home")</li>
+            <li>Survey</li>
         </ul>
     </nav>
     <div> 
         @RenderBody();
     </div>
+    <footer>
+        <p>&copy;2017 Moshe &amp; Rachel Enterprises</p>
+    </footer>
 </body>
 </html>

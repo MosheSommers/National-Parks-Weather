@@ -18,6 +18,15 @@ namespace Capstone.Web.Controllers
             this.weatherDal = weatherDal;
         }
         // GET: Weather
+        public ActionResult GetNewForecast(string code, bool farenheit)
+        {
+
+            Session[fOrC] = farenheit;
+
+            List<Weather> fiveDayForecast = weatherDal.GetFiveDayForecast(code, farenheit);
+            return View("GetForecast", fiveDayForecast);
+        }
+
         public ActionResult GetForecast(string code)
         {
             bool farenheit;
@@ -28,9 +37,8 @@ namespace Capstone.Web.Controllers
             }
             farenheit = (bool)Session[fOrC];
 
-            List <Weather> fiveDayForecast = weatherDal.GetFiveDayForecast(code, farenheit);
+            List<Weather> fiveDayForecast = weatherDal.GetFiveDayForecast(code, farenheit);
             return View("GetForecast", fiveDayForecast);
         }
-
     }
 }

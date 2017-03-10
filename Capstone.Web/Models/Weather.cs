@@ -20,6 +20,15 @@ namespace Capstone.Web.Models
         public string Suggestion { get; set; }
         public bool Farenheit { get; set;  }
 
+        public string UnitDisplay()
+        {
+            if (Farenheit)
+            {
+                return "Celsius";
+            }
+            return "Farenheit";
+        }
+
         public string GetSuggestion ()
         {
             Suggestion = "";
@@ -64,11 +73,12 @@ namespace Capstone.Web.Models
             return Suggestion;
         }
 
-        public int GetTemperature(int temp)
+        public int GetUnit(int temp)
         {
             if (!Farenheit)
             {
-                return (temp - 32) * (5 / 9);
+               Double number =((double)temp - 32) * ((double)5 / 9);
+                return (int)number;
             }
             return temp;
         }

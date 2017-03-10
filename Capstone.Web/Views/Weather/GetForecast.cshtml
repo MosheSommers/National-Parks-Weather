@@ -3,12 +3,72 @@
     ViewBag.Title = "GetForecast";
     Layout = "~/Views/Shared/_layout.cshtml";
 }
+@using Capstone.Web.Models;
+@model List<Weather>
 
 <div id="forecast-page">
     <div id="section-content">
-        <div class="weather-image">
-            <img src="~/Content/img/weather/@(Model.ParkCode).png" />
-        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                    @{
+                        foreach (Weather weather in Model)
+                        {
+                            <td>Day @weather.Day</td>
+                        }
+                    }
+                </tr>
+                <tr>
+                    <td></td>
+                    @{
+                        foreach (Weather weather in Model)
+                        {
+                            <td><img src="~/Content/img/weather/@(weather.Forecast.Replace(" ", "")).png" /></td>
+                        }
+                    }
+                </tr>
+                <tr>
+                    <td>
+                        Forecast
+                    </td>
+                    @{
+                        foreach (Weather weather in Model)
+                        {
+                            <td>@weather.Forecast</td>
+                        }
+                    }
+                </tr>
+                <tr>
+                    <td>High</td>
+                    @{
+                        foreach (Weather weather in Model)
+                        {
+                            <td>@(weather.GetUnit(weather.HighTemp))&deg;</td>
+                        }
+                    }
+                </tr>
+                <tr>
+                    <td>Low</td>
+                    @{
+                        foreach (Weather weather in Model)
+                        {
+                            <td>@(weather.GetUnit(weather.LowTemp))&deg;</td>
+                        }
+                    }
+                </tr>
+                <tr>
+                    <td>Suggestion</td>
+                    @{
+                        foreach (Weather weather in Model)
+                        {
+                            <td>@(weather.GetSuggestion())</td>
+                        }
+                    }
+                </tr>
+            </tbody>
+        </table>
+        @Html.ActionLink($"Change to {@Model[0].UnitDisplay()}", "GetNewForecast", "Weather", new { code = Model[0].ParkCode, farenheit = !Model[0].Farenheit }, null)
     </div>
 </div>
 
