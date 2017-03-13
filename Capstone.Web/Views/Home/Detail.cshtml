@@ -6,12 +6,13 @@
 @using Capstone.Web.Models;
 @model Park
 
+
 <div id="detail-page">
     <div id="section-content">
+        <div id="detail-image">
+            <img src="~/Content/img/parks/@(Model.Code).jpg" />
+        </div>
         <div class="park">
-            <div id="detail-image">
-                <img src="~/Content/img/parks/@(Model.Code).jpg" />
-            </div>
             <div id="detail-details">
                 <div id="park-name">
                     <h2>@Model.Name</h2>

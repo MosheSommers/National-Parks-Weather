@@ -1,36 +1,37 @@
 ﻿
 @{
     ViewBag.Title = "Survey";
-    //Layout = "~/Views/Shared/_layout.cshtml";
+    //Layout = "~/Views/Shared/_layout.cshtml"; 
 }
 @using Capstone.Web.Models;
 @model Survey
 
-<div section-content>
-    @using (Html.BeginForm("Survey", "Survey", FormMethod.Post))
-    {
-        <div class="formInputGroup">
-            @Html.Label("ParkCode", "Choose your favorite park: ")
-            @Html.DropDownListFor(m => m.ParkCode, Survey.Parks)
-        </div>
+<div class="survey-page">
+    <div id="section-content">
+        @using (Html.BeginForm("Survey", "Survey", FormMethod.Post))
+        {
+            <div class="formInputGroup">
+                @Html.Label("ParkCode", "Choose your favorite park: ")
+                @Html.DropDownListFor(m => m.ParkCode, Survey.Parks)
+            </div>
 
-        <div class="formInputGroup">
-            @Html.Label("EmailAddress", "Email: ")
-            @Html.TextBoxFor(m=> m.EmailAddress)
-        </div>
+            <div class="formInputGroup">
+                @Html.Label("EmailAddress", "Email: ")
+                @Html.TextBoxFor(m => m.EmailAddress)
+            </div>
 
-        <div class="formInputGroup">
-            @Html.Label("State", "Choose A State")
-            @Html.DropDownListFor(m => m.State, Survey.States)
-        </div>
+            <div class="formInputGroup">
+                @Html.Label("State", "Choose A State")
+                @Html.DropDownListFor(m => m.State, Survey.States)
+            </div>
 
-        <div class="formInputGroup">
-            @Html.Label("Activity", "What's your activity level? ")
-            @Html.DropDownListFor(m => m.Activity, Survey.Levels)
-        </div>
-        <button>Submit</button>
-    }
-
-
-
+            <div class="formInputGroup">
+                @Html.Label("Activity", "What's your activity level? ")
+                @Html.DropDownListFor(m => m.Activity, Survey.Levels)
+            </div>
+            <button>Submit</button>
+        }
+    </div>
 </div>
+
+

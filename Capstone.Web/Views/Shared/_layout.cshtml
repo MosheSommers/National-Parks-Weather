@@ -13,13 +13,11 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li>@Html.ActionLink("Home","Index", "Home")</li>
-            <li>@Html.ActionLink("Survey", "Index", "Survey")</li>
-        </ul>
+        <p class="home-link">@Html.ActionLink("Home", "Index", "Home")</p>
+        <p class="survey-link">@Html.ActionLink("Survey", "Index", "Survey")</p>
     </nav>
     <div> 
-        @RenderBody();
+        @RenderBody()
     </div>
     <footer>
         <p>&copy;2017 Moshe &amp; Rachel Enterprises</p>
