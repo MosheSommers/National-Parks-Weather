@@ -25,6 +25,11 @@ namespace Capstone.Web.Controllers
         public ActionResult Detail(string code)
         {
             Park p = parkDal.GetParkInfo(code);
+            if (p == null)
+            {
+                return HttpNotFound();
+            }
+
             return View("Detail", p);
         }
     }

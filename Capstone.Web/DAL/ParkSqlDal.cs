@@ -23,7 +23,7 @@ namespace Capstone.Web.DAL
         {
             try
             {
-                Park p;
+                Park p = null;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -32,9 +32,12 @@ namespace Capstone.Web.DAL
                     command.Parameters.AddWithValue("@code", parkCode);
 
                     SqlDataReader reader = command.ExecuteReader();
-                    reader.Read();
+                    if (reader.Read())
+                    {
+                        p = CreatePark(reader);
+                    }
 
-                    p = CreatePark(reader);
+                    
 
                 }
                 return p;

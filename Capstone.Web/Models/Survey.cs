@@ -33,25 +33,25 @@ namespace Capstone.Web.Models
             }
         }
 
-        public static List<SelectListItem> Parks
-        {
-            get
-            {
-                return new List<SelectListItem>()
-                {
-                    new SelectListItem { Value = "CVNP", Text = "Cuyahoga Valley National Park" },
-                    new SelectListItem { Value= "ENP", Text = "Everglades National Park" },
-                    new SelectListItem { Value = "GCNP", Text = "Grand Canyon National Park" },
-                    new SelectListItem { Value = "GNP", Text = "Glacier National Park"},
-                    new SelectListItem { Value = "GSMNP", Text = "Great Smokey Mountains National Park" },
-                    new SelectListItem { Value = "GTNP", Text = "Grand Teton National Park" },
-                    new SelectListItem { Value = "MRNP", Text = "Mount Rainier National Park" },
-                    new SelectListItem { Value = "RMNP", Text = "Rocky Mountain National Park" },
-                    new SelectListItem { Value = "YNP", Text = "Yellowstone National Park" },
-                    new SelectListItem { Value = "YNP2", Text = "Yosemite National Park" }
-                };
-            }
-        }
+        public List<SelectListItem> Parks { get; } = new List<SelectListItem>();
+        //{
+        //    get
+        //    {
+        //        return new List<SelectListItem>()
+        //        {
+        //            new SelectListItem { Value = "CVNP", Text = "Cuyahoga Valley National Park" },
+        //            new SelectListItem { Value= "ENP", Text = "Everglades National Park" },
+        //            new SelectListItem { Value = "GCNP", Text = "Grand Canyon National Park" },
+        //            new SelectListItem { Value = "GNP", Text = "Glacier National Park"},
+        //            new SelectListItem { Value = "GSMNP", Text = "Great Smokey Mountains National Park" },
+        //            new SelectListItem { Value = "GTNP", Text = "Grand Teton National Park" },
+        //            new SelectListItem { Value = "MRNP", Text = "Mount Rainier National Park" },
+        //            new SelectListItem { Value = "RMNP", Text = "Rocky Mountain National Park" },
+        //            new SelectListItem { Value = "YNP", Text = "Yellowstone National Park" },
+        //            new SelectListItem { Value = "YNP2", Text = "Yosemite National Park" }
+        //        };
+        //    }
+        //}
 
         public static List<SelectListItem> States
         {
